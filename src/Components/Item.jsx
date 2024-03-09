@@ -9,23 +9,15 @@ const Item = () => {
 	const [itemData, setItemData] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 
-	console.log("itemId:", itemId.id);
-
 	const options = {
 		method: "GET",
-		url: "https://kohls.p.rapidapi.com/products/detail",
-		params: { webID: `${itemId.id}` },
-		headers: {
-			"X-RapidAPI-Key": "c8692ba461mshea48716bc3fc8bcp13f13djsn423c425332cb",
-			"X-RapidAPI-Host": "kohls.p.rapidapi.com",
-		},
+		url: `https://fakestoreapi.com/products/${itemId.id}`,
 	};
 
 	const getData = async () => {
 		try {
 			const response = await axios.request(options);
-			console.log("response: ", response);
-			setItemData(response.data.payload.products[0]);
+			setItemData(response.data);
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -35,9 +27,7 @@ const Item = () => {
 
 	useEffect(() => {
 		getData();
-	}, [itemId]);
-
-	console.log("single item data: ", itemData);
+	}, []);
 
 	return (
 		<div>
@@ -48,10 +38,11 @@ const Item = () => {
 				</div>
 			) : (
 				<div>
-					<img src={itemData.images[0].url} alt="" />
-					<h2>{itemData.brand}</h2>
-					<h3>{itemData.productTitle}</h3>
-					<p>{itemData.description.shortDescription}</p>
+					<img src={itemData.image} alt="" style={{ height: "300px" }} />
+					<h3>{itemData.title}</h3>
+					<p>{itemData.description}</p>
+					<p>{itemData.price}€</p>
+					<p>product code: {itemData.id}</p>
 				</div>
 			)}
 		</div>

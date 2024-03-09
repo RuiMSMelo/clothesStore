@@ -5,18 +5,18 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 const Mens = () => {
-	const [mensData, setMensData] = useState([]);
+	const [electronicsData, setElectronicsData] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 
 	const options = {
 		method: "GET",
-		url: "https://fakestoreapi.com/products/category/men's clothing",
+		url: "https://fakestoreapi.com/products/category/electronics",
 	};
 
 	const getData = async () => {
 		try {
 			const response = await axios.request(options);
-			setMensData(response.data);
+			setElectronicsData(response.data);
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -28,7 +28,7 @@ const Mens = () => {
 		getData();
 	}, []);
 
-	console.log("mens data: ", mensData);
+	console.log("electronics data: ", electronicsData);
 
 	return (
 		<div>
@@ -39,8 +39,8 @@ const Mens = () => {
 			) : (
 				<div>
 					<Navbar />
-					<h1>Men&apos;s clothing</h1>
-					{mensData.map((item) => (
+					<h1>Electronics</h1>
+					{electronicsData.map((item) => (
 						<div key={item.id}>
 							<div>
 								<Link to={`/item/${item.id}`}>

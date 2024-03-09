@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Homepage = () => {
+	//remove this when finished
 	fetch("https://fakestoreapi.com/products")
 		.then((res) => res.json())
-		.then((json) => console.log("fakestoreapi: ", json));
-	fetch("https://fakestoreapi.com/products/20")
+		.then((json) => console.log("ALL: ", json));
+
+	fetch("https://fakestoreapi.com/products/categories")
 		.then((res) => res.json())
-		.then((json) => console.log("one product", json));
+		.then((json) => console.log(json));
+
 	return (
 		<div>
 			<Navbar />

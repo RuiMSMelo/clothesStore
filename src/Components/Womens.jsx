@@ -34,7 +34,6 @@ const Womens = () => {
 		<div>
 			{isLoading === true ? (
 				<div className="loading_screen">
-					<h1>Fetching women&apos;s clothing...</h1>
 					<ThreeCircles color={"#4d61a9"} />
 				</div>
 			) : (

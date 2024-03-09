@@ -10,8 +10,14 @@ const Navbar = () => {
 			<button>
 				<Link to="/womens">Women</Link>
 			</button>
+			<button>
+				<Link to="/jewelry">Jewelry</Link>
+			</button>
+			<button>
+				<Link to="/electronics">Electronics</Link>
+			</button>
 			<Link to={"/"}>
-				<img src={banner} style={{ height: "150px" }} />
+				<img src={banner} style={{ height: "115px" }} />
 			</Link>
 			<button>
 				<Link to="/wishlist">Wishlist</Link>
