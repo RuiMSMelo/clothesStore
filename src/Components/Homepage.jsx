@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Homepage = () => {
-	//remove this when finished
-	fetch("https://fakestoreapi.com/products")
-		.then((res) => res.json())
-		.then((json) => console.log("ALL: ", json));
-
-	fetch("https://fakestoreapi.com/products/categories")
-		.then((res) => res.json())
-		.then((json) => console.log(json));
+	fetch("https://fakestoreapi.com/products").then((res) => res.json());
+	fetch("https://fakestoreapi.com/products/categories").then((res) =>
+		res.json()
+	);
 
 	return (
 		<div>
@@ -22,7 +19,14 @@ const Homepage = () => {
 				<button>
 					<Link to="/womens">Shop for women</Link>
 				</button>
+				<button>
+					<Link to="/jewelery">Shop jewelery</Link>
+				</button>
+				<button>
+					<Link to="/electronics">Shop electronics</Link>
+				</button>
 			</div>
+			<Footer />
 		</div>
 	);
 };

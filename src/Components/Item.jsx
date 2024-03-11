@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ThreeCircles } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Item = () => {
 	const itemId = useParams();
@@ -45,6 +46,7 @@ const Item = () => {
 					<p>product code: {itemData.id}</p>
 				</div>
 			)}
+			<Footer />
 		</div>
 	);
 };

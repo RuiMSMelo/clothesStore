@@ -1,30 +1,55 @@
 import { Link } from "react-router-dom";
-import banner from "../imgs/random_clothing_banner.jpg";
+import Cart from "../imgs/shopping-cart-icon.png";
+import Wishlist from "../imgs/heart-icon.png";
 
 const Navbar = () => {
 	return (
 		<nav>
-			<button>
-				<Link to="/mens">Men</Link>
-			</button>
-			<button>
-				<Link to="/womens">Women</Link>
-			</button>
-			<button>
-				<Link to="/jewelry">Jewelry</Link>
-			</button>
-			<button>
-				<Link to="/electronics">Electronics</Link>
-			</button>
-			<Link to={"/"}>
-				<img src={banner} style={{ height: "115px" }} />
-			</Link>
-			<button>
-				<Link to="/wishlist">Wishlist</Link>
-			</button>
-			<button>
-				<Link to="/cart">Cart</Link>
-			</button>
+			<div className="navbar">
+				<div className="navbarBrand">
+					<Link to={"/"} className="navbar-brand">
+						<h1>The Store</h1>
+					</Link>
+				</div>
+				<div className="navbarButtonsGroup">
+					<div className="navbarLeftButtonsGroup">
+						<Link to="/mens">
+							<button>Men</button>
+						</Link>
+						<Link to="/womens">
+							<button>Women</button>
+						</Link>
+						<Link to="/jewelery">
+							<button>Jewelry</button>
+						</Link>
+						<Link to="/electronics">
+							<button>Electronics</button>
+						</Link>
+					</div>
+					<div className="navbarRightButtonsGroup">
+						<Link to="/wishlist">
+							<img src={Wishlist} className="navbarIcons" />
+						</Link>
+						<Link to="/cart">
+							<img src={Cart} className="navbarIcons" />
+						</Link>
+					</div>
+				</div>
+			</div>
+			<div className="second-navbar">
+				<div>
+					<p>The Store card - get up to 50% off</p>
+				</div>
+				<div>
+					<p>Free standard shipping over 50€</p>
+				</div>
+				<div>
+					<p>
+						Shop now, pay later.
+						<Link style={{ color: "black" }}> Learn more</Link>
+					</p>
+				</div>
+			</div>
 		</nav>
 	);
 };

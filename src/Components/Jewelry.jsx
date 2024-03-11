@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ThreeCircles } from "react-loader-spinner";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Mens = () => {
 	const [jeweleryData, setJeweleryData] = useState([]);
@@ -28,17 +29,15 @@ const Mens = () => {
 		getData();
 	}, []);
 
-	console.log("jewelry data: ", jeweleryData);
-
 	return (
 		<div>
+			<Navbar />
 			{isLoading === true ? (
 				<div className="loading_screen">
 					<ThreeCircles color={"#4d61a9"} />
 				</div>
 			) : (
 				<div>
-					<Navbar />
 					<h1>Jewelery</h1>
 					{jeweleryData.map((item) => (
 						<div key={item.id}>
@@ -63,6 +62,7 @@ const Mens = () => {
 					))}
 				</div>
 			)}
+			<Footer />
 		</div>
 	);
 };

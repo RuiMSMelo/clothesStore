@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { ThreeCircles } from "react-loader-spinner";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Womens = () => {
 	const [womensData, setWomensData] = useState([]);
@@ -28,17 +29,15 @@ const Womens = () => {
 		getData();
 	}, []);
 
-	console.log("womens data: ", womensData);
-
 	return (
 		<div>
+			<Navbar />
 			{isLoading === true ? (
 				<div className="loading_screen">
 					<ThreeCircles color={"#4d61a9"} />
 				</div>
 			) : (
 				<div>
-					<Navbar />
 					<h1>Women&apos;s clothing</h1>
 					{womensData.map((item) => (
 						<div key={item.id}>
@@ -63,6 +62,7 @@ const Womens = () => {
 					))}
 				</div>
 			)}
+			<Footer />
 		</div>
 	);
 };
