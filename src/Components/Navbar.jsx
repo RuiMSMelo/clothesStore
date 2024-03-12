@@ -45,8 +45,10 @@ const Navbar = () => {
 				</div>
 				<div>
 					<p>
-						Shop now, pay later.
-						<Link style={{ color: "black" }}> Learn more</Link>
+						Shop now, pay later.{" "}
+						<Link style={{ color: "black", textDecoration: "underline" }}>
+							Learn more
+						</Link>
 					</p>
 				</div>
 			</div>
