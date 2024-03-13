@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import mainImage from "../imgs/main_image.jpg";
 
 const Homepage = () => {
 	fetch("https://fakestoreapi.com/products").then((res) => res.json());
@@ -11,20 +12,24 @@ const Homepage = () => {
 	return (
 		<div>
 			<Navbar />
-			<h1>Welcome to SUPER COOL Clothes Store</h1>
-			<div>
-				<button>
-					<Link to="/mens">Shop for men</Link>
-				</button>
-				<button>
-					<Link to="/womens">Shop for women</Link>
-				</button>
-				<button>
-					<Link to="/jewelery">Shop jewelery</Link>
-				</button>
-				<button>
-					<Link to="/electronics">Shop electronics</Link>
-				</button>
+			<div className="itemsMainDiv">
+				<div className="homepageMainImageDiv">
+					<img src={mainImage} className="homepageMainImage" />
+				</div>
+				<div className="homepageButtonsDiv">
+					<Link to="/mens">
+						<button>Shop for men</button>
+					</Link>
+					<Link to="/womens">
+						<button>Shop for women</button>
+					</Link>
+					<Link to="/jewelery">
+						<button>Shop jewelery</button>
+					</Link>
+					<Link to="/electronics">
+						<button>Shop electronics</button>
+					</Link>
+				</div>
 			</div>
 			<Footer />
 		</div>
