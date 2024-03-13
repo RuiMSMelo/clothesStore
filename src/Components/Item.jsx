@@ -1,14 +1,17 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThreeCircles } from "react-loader-spinner";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { CartContext } from "../Contexts/Cart";
 
 const Item = () => {
 	const itemId = useParams();
 	const [itemData, setItemData] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
+	// eslint-disable-next-line no-unused-vars
+	const { cartItems, addToCart } = useContext(CartContext);
 
 	const options = {
 		method: "GET",
@@ -43,7 +46,10 @@ const Item = () => {
 					<h3>{itemData.title}</h3>
 					<p>{itemData.description}</p>
 					<p>{itemData.price}€</p>
-					<p>product code: {itemData.id}</p>
+					<button onClick={() => addToCart(itemData)}>Add to Cart</button>
+					<div>
+						<p>product code: {itemData.id}</p>
+					</div>
 				</div>
 			)}
 			<Footer />

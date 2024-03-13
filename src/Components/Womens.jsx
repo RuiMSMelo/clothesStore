@@ -37,29 +37,39 @@ const Womens = () => {
 					<ThreeCircles color={"#4d61a9"} />
 				</div>
 			) : (
-				<div>
-					<h1>Women&apos;s clothing</h1>
-					{womensData.map((item) => (
-						<div key={item.id}>
-							<div>
-								<Link to={`/item/${item.id}`}>
-									<img
-										className="productMainImage"
-										src={item.image}
-										alt=""
-										style={{ width: "120px" }}
-									/>
-								</Link>
+				<div className="itemsMainDiv">
+					<div>
+						<h1>Women&apos;s clothing</h1>
+					</div>
+					<div className="item-cardDiv">
+						{womensData.map((item) => (
+							<div key={item.id} className="item-card">
+								<div>
+									<Link to={`/item/${item.id}`}>
+										<img
+											className="productMainImage"
+											src={item.image}
+											alt=""
+											style={{ width: "120px" }}
+										/>
+									</Link>
+								</div>
+								<div>
+									<div>
+										<h4>{item.title}</h4>
+									</div>
+									<div>
+										<p style={{ color: "grey", fontWeight: "800" }}>
+											{item.price}€
+										</p>
+										<p>
+											{item.rating.rate} • {item.rating.count} Votes
+										</p>
+									</div>
+								</div>
 							</div>
-							<div>
-								<h3>{item.title}</h3>
-								<p>{item.price}€</p>
-								<p>
-									{item.rating.rate} • {item.rating.count} Votes
-								</p>
-							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			)}
 			<Footer />

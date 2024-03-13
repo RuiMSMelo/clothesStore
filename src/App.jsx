@@ -6,6 +6,7 @@ import Womens from "./Components/Womens";
 import Item from "./Components/Item";
 import Jewelry from "./Components/Jewelry";
 import Electronics from "./Components/Electronics";
+import Cart from "./Components/Cart";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<Route path="/jewelery" element={<Jewelry />} />
 			<Route path="/electronics" element={<Electronics />} />
 			<Route path="/item/:id" element={<Item />}></Route>
+			<Route path="/cart" element={<Cart />}></Route>
 		</Routes>
 	);
 }
