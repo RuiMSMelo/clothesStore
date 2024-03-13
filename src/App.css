@@ -144,3 +144,14 @@
 	align-items: center;
 	justify-content: space-between;
 }
+
+.cartLink * {
+	height: 20px;
+	display: flex;
+	flex-direction: row;
+	align-content: space-around;
+}
+.cartItems-length {
+	text-decoration: none;
+	color: black;
+}

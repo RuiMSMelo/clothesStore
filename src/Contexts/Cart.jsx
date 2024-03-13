@@ -4,8 +4,6 @@ export const CartContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const CartProvider = ({ children }) => {
-	console.log("ctnx: children", children);
-
 	const [cartItems, setCartItems] = useState(
 		JSON.parse(localStorage.getItem("cartItems")) || []
 	);

@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import Cart from "../imgs/shopping-cart-icon.png";
+import cartIcon from "../imgs/shopping-cart-icon.png";
 import Wishlist from "../imgs/heart-icon.png";
+import { CartContext } from "../Contexts/Cart";
 
 const Navbar = () => {
+	const { cartItems } = useContext(CartContext);
+
 	return (
 		<nav>
 			<div className="navbar">
@@ -30,9 +34,12 @@ const Navbar = () => {
 						<Link to="/wishlist">
 							<img src={Wishlist} className="navbarIcons" />
 						</Link>
-						<Link to="/cart">
-							<img src={Cart} className="navbarIcons" />
-						</Link>
+						<div className="cartLink">
+							<Link to="/cart">
+								<img src={cartIcon} className="navbarIcons" />
+								<p className="cartItems-length">({cartItems.length})</p>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
