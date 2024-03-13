@@ -55,7 +55,11 @@ const Mens = () => {
 									</Link>
 								</div>
 								<div>
-									<h4>{item.title}</h4>
+									<h4>
+										{item.title.length > 40
+											? `${item.title.slice(0, 40)}...`
+											: item.title}
+									</h4>
 								</div>
 								<div>
 									<p style={{ color: "grey", fontWeight: "800" }}>

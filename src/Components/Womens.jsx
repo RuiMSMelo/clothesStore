@@ -38,7 +38,7 @@ const Womens = () => {
 				</div>
 			) : (
 				<div className="itemsMainDiv">
-					<div>
+					<div className="itemsMainDivTitle">
 						<h1>Women&apos;s clothing</h1>
 					</div>
 					<div className="item-cardDiv">
@@ -55,17 +55,19 @@ const Womens = () => {
 									</Link>
 								</div>
 								<div>
-									<div>
-										<h4>{item.title}</h4>
-									</div>
-									<div>
-										<p style={{ color: "grey", fontWeight: "800" }}>
-											{item.price}€
-										</p>
-										<p>
-											{item.rating.rate} • {item.rating.count} Votes
-										</p>
-									</div>
+									<h4>
+										{item.title.length > 40
+											? `${item.title.slice(0, 40)}...`
+											: item.title}
+									</h4>
+								</div>
+								<div>
+									<p style={{ color: "grey", fontWeight: "800" }}>
+										{item.price}€
+									</p>
+									<p>
+										{item.rating.rate} • {item.rating.count} Votes
+									</p>
 								</div>
 							</div>
 						))}
