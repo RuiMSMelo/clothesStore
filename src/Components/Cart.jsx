@@ -10,7 +10,7 @@ const Cart = () => {
 	return (
 		<div>
 			<Navbar />
-			<div>
+			<div className="itemsMainDiv">
 				{cartItems.map((item) => (
 					<div key={item.id}>
 						<div>
@@ -38,7 +38,7 @@ const Cart = () => {
 					</button>
 				</div>
 			) : (
-				<div>
+				<div className="itemsMainDiv">
 					<h2>Your cart is empty!</h2>
 				</div>
 			)}
