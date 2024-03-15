@@ -54,13 +54,6 @@ export const CartProvider = ({ children }) => {
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 	}, [cartItems]);
 
-	useEffect(() => {
-		const cartItems = localStorage.getItem("cartItems");
-		if (cartItems) {
-			setCartItems(JSON.parse(cartItems));
-		}
-	}, []);
-
 	return (
 		<CartContext.Provider
 			value={{

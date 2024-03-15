@@ -37,18 +37,18 @@ const Item = () => {
 		<div>
 			<Navbar />
 			{isLoading ? (
-				<div>
+				<div className="loading_screen">
 					<ThreeCircles color={"#4d61a9"} />
 				</div>
 			) : (
-				<div>
+				<div className="oneItemMainDiv">
 					<img src={itemData.image} alt="" style={{ height: "300px" }} />
 					<h3>{itemData.title}</h3>
 					<p>{itemData.description}</p>
-					<p>{itemData.price}€</p>
+					<p className="price">{itemData.price}€</p>
 					<button onClick={() => addToCart(itemData)}>Add to Cart</button>
-					<div>
-						<p>product code: {itemData.id}</p>
+					<div className="productCodeDiv">
+						<p className="productCode">product code: {itemData.id}</p>
 					</div>
 				</div>
 			)}

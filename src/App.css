@@ -223,3 +223,29 @@ nav {
 	display: flex;
 	align-items: center;
 }
+
+.item-exit-active {
+	transform: translateX(-100%);
+	transition: transform 300ms ease-in;
+}
+
+.oneItemMainDiv {
+	width: 100%;
+	padding: 30px 10vw 100px 10vw;
+}
+.oneItemMainDiv img {
+	max-width: 200px;
+	max-height: 250px;
+	width: auto;
+	height: auto;
+	margin-bottom: 50px;
+}
+.productCode {
+	font-size: 0.6rem;
+	color: grey;
+}
+.price {
+	color: rgb(22, 42, 101);
+	font-weight: 900;
+	font-size: 1.2rem;
+}
