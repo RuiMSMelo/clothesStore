@@ -1,251 +1,269 @@
 #root {
-	width: 100%;
-	height: 100vh;
-	text-align: center;
-	font-family: "Times New Roman", Times, serif;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 nav {
-	height: 35vh;
+  height: 35vh;
 }
 
 .loading_screen {
-	height: 100vh;
-	overflow-y: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .homepageMainImage {
-	width: 100%;
-	height: 65vh;
+  width: 100%;
+  height: 65vh;
 }
 .homepageButtonsDiv {
-	width: 100%;
-	top: 75vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	position: absolute;
+  width: 100%;
+  top: 75vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
 }
 .homepageButtonsDiv button {
-	border: none;
+  border: none;
 }
 .homepageButtonsDiv button:hover {
-	transition: none;
-	border: none;
+  transition: none;
+  border: none;
 }
 .homepageButtonsDiv button a {
-	color: black;
-	text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .productMainImage {
-	width: 110px;
-	max-height: 130px;
+  width: 110px;
+  max-height: 130px;
 }
 .productMainImage:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .navbar {
-	display: flex;
-	flex-direction: column;
-	align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 .navbarBrand {
-	padding-left: 20px;
-	display: flex;
-	align-items: center;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
 }
 .navbarButtonsGroup {
-	width: 100%;
-	padding: 0 10px 10px 10px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .navbarRightButtonsGroup {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 .navbarRightButtonsGroup * {
-	padding-right: 10px;
+  padding-right: 10px;
 }
 .navbarLeftButtonsGroup * button {
-	background-color: white;
-	transition: none;
+  background-color: white;
+  transition: none;
 }
 .navbarLeftButtonsGroup * button:hover {
-	border: none;
+  border: none;
 }
 .navbarIcons {
-	width: 30px;
+  width: 30px;
 }
 .second-navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	background-color: rgba(242, 242, 242, 0.909);
-	margin: 20px 20px 20px 20px;
-	padding-left: 6vw;
-	padding-right: 6vw;
-	font-size: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(242, 242, 242, 0.909);
+  margin: 20px 20px 20px 20px;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  font-size: 0.75rem;
 }
 .second-navbar div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .second-navbar div p {
-	margin: 0;
-	padding: 12px;
+  margin: 0;
+  padding: 12px;
 }
 
 .footerDiv {
-	position: relative;
-	height: 20vh;
-	padding: 130px 60px 130px 60px;
-	margin: 0px 40px 0 40px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-	border-top: 1px rgb(220, 220, 220) solid;
-	margin-top: auto;
+  position: relative;
+  height: 20vh;
+  padding: 130px 60px 130px 60px;
+  margin: 0px 40px 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px rgb(220, 220, 220) solid;
+  margin-top: auto;
 }
 .socialmedia-icons {
-	width: 250px;
+  width: 250px;
 }
 .footerLeftDiv {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .footerLeftDiv * {
-	text-decoration: none;
-	color: black;
-	padding: 7px;
+  text-decoration: none;
+  color: black;
+  padding: 7px;
 }
 .footerLeftDiv *:hover {
-	color: black;
+  color: black;
 }
 .footerRightDiv {
-	height: 150px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .acceptedCardsIcons {
-	width: 60px;
+  width: 60px;
 }
 
 .itemsMainDiv {
-	padding-bottom: 10px;
-	min-height: 65vh;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+  padding-bottom: 10px;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .itemsMainDivTitle {
-	margin: 30px;
+  margin: 30px;
 }
 .item-cardDiv {
-	border-top: 1px rgb(220, 220, 220) solid;
-	margin: 0 40px 0 40px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-content: start;
-	padding-top: 75px;
-	padding-bottom: 75px;
+  border-top: 1px rgb(220, 220, 220) solid;
+  margin: 0 40px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: start;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 .item-card {
-	text-decoration: none;
-	color: black;
-	margin: 20px 0 60px 0;
-	width: 250px;
-	height: 350px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+  text-decoration: none;
+  color: black;
+  margin: 20px 0 60px 0;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cartLink * {
-	height: 20px;
-	display: flex;
-	flex-direction: row;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
 }
 .cartItems-length {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 .emptyCart {
-	position: absolute;
-	top: 50%;
-	text-align: center;
-	width: 100%;
-	transform: translateY(150%);
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translateY(150%);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.emptyCartMessage {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .mainContent {
-	display: flex;
-	justify-content: space-evenly;
-	width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .cartSummary {
-	padding: 75px 10px 10px 10px;
-	width: 20vw;
+  padding: 75px 10px 10px 10px;
+  width: 20vw;
 }
 .cartItemsDiv {
-	padding: 40px;
-	width: 65vw;
-	display: grid;
-	grid-template-columns: 1fr 10fr 1fr;
-	column-gap: 0;
+  padding: 40px;
+  width: 65vw;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  column-gap: 0;
 }
 .cartItemsDiv * {
-	padding: 5px;
+  padding: 5px;
 }
 .cartButtons {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .cartButtons button {
-	height: auto;
-	padding: 10px;
+  height: auto;
+  padding: 10px;
 }
 .cartButtons p {
-	padding-top: 20px;
+  padding-top: 20px;
 }
 .cartCard {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .item-exit-active {
-	transform: translateX(-100%);
-	transition: transform 300ms ease-in;
+  transform: translateX(-100%);
+  transition: transform 200ms ease-in;
 }
 
 .oneItemMainDiv {
-	width: 100%;
-	padding: 30px 10vw 100px 10vw;
+  width: 100%;
+  padding: 30px 10vw 100px 10vw;
 }
 .oneItemMainDiv img {
-	max-width: 200px;
-	max-height: 250px;
-	width: auto;
-	height: auto;
-	margin-bottom: 50px;
+  max-width: 200px;
+  max-height: 250px;
+  width: auto;
+  height: auto;
+  margin-bottom: 50px;
 }
 .productCode {
-	font-size: 0.6rem;
-	color: grey;
+  font-size: 0.6rem;
+  color: grey;
 }
 .price {
-	color: rgb(22, 42, 101);
-	font-weight: 900;
-	font-size: 1.2rem;
+  color: rgb(22, 42, 101);
+  font-weight: 900;
+  font-size: 1.2rem;
 }

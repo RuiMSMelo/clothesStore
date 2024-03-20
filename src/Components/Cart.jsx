@@ -15,7 +15,7 @@ const Cart = () => {
 				<div className="itemsMainDiv">
 					<TransitionGroup component={null}>
 						{cartItems.map((item) => (
-							<CSSTransition key={item.id} timeout={300} classNames="item">
+							<CSSTransition key={item.id} timeout={200} classNames="item">
 								<div className="cartItemsDiv">
 									<div className="cartCard">
 										<img src={item.image} style={{ width: "100px" }} />
@@ -47,7 +47,7 @@ const Cart = () => {
 					</div>
 				) : (
 					<div className="emptyCart">
-						<h2>Your cart is empty!</h2>
+						<h2 className="emptyCartMessage">Your cart is empty!</h2>
 					</div>
 				)}
 			</div>
